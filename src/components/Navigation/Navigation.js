@@ -23,7 +23,7 @@ const Navigation = () => {
           </NavLink>
         </div>
         <div>
-          <button className="bg-blue-600 py-1.5 px-3 font-medium text-white">
+          <button className="bg-blue-600 py-1.5 px-3 font-medium text-white rounded">
             Sign Up
           </button>
         </div>
