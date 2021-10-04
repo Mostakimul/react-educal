@@ -1,6 +1,6 @@
 # Join us with Educal
 
-Live Website Link: [Create React App](https://mostakimul-react-router-phero-09.netlify.app/)
+Live Website Link: [Educal](https://mostakimul-react-router-phero-09.netlify.app/)
 
 > https://mostakimul-react-router-phero-09.netlify.app/
 
