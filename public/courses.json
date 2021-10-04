@@ -1,0 +1,14 @@
+[
+  {
+    "courseId": 1,
+    "courseName": "Italian A1",
+    "courseTeacher": "Pablo Muzacchini",
+    "courseCategory": "Language",
+    "lessons": 32,
+    "rating": 5,
+    "enrolled": 53,
+    "courseDuration": 4,
+    "courseHours": 64,
+    "cost": 300
+  }
+]
