@@ -13,7 +13,7 @@ const Overview = () => {
         </p>
       </div>
       {/* Card Section */}
-      <div className="grid grid-cols-4 gap-4 my-4">
+      <div className="grid grid-cols-4 gap-4 my-8">
         <OverviewCard
           className="bg-blue-600"
           title="4,000 Online courses"
