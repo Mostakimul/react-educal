@@ -1,7 +1,15 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Course from '../Course/Course';
 
 const Courses = () => {
+  const [courses, setCourses] = useState([]);
+
+  useEffect(() => {
+    fetch('./courses.json')
+      .then((res) => res.json())
+      .then((data) => setCourses(data));
+  }, []);
+
   return (
     <div className="container mx-auto">
       <div className="text-center mx-auto">
@@ -14,8 +22,10 @@ const Courses = () => {
         </p>
       </div>
       {/* Courses */}
-      <div className="grid grid-cols-3 gap-4 mt-10">
-        <Course></Course>
+      <div className="grid grid-cols-3 gap-7 mt-10">
+        {courses.map((course) => (
+          <Course key={course.courseId} course={course}></Course>
+        ))}
       </div>
     </div>
   );

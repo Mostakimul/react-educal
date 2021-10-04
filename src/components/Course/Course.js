@@ -1,45 +1,55 @@
 import React from 'react';
 import { ImArrowRight2, ImBook, ImStarFull } from 'react-icons/im';
-const Course = () => {
+const Course = (props) => {
+  const {
+    courseName,
+    courseImage,
+    courseTeacher,
+    teacherImage,
+    courseCategory,
+    lessons,
+    rating,
+    enrolled,
+    cost,
+  } = props.course;
   return (
     <div className="bg-white rounded-lg shadow-lg">
       {/* Card Image */}
-      <div>
-        <img
-          src="/images/course-1.jpg"
-          alt="Course 1"
-          className="rounded-t-lg"
-        />
+      <div className="relative">
+        <img src={courseImage} alt="Course 1" className="rounded-t-lg" />
+        <p className="absolute top-1.5 left-1 rounded-3xl font-medium text-sm bg-green-700 text-white py-1 px-3">
+          {courseCategory}
+        </p>
       </div>
       {/* Card Body */}
       <div className="p-5">
         {/* lesson and rating */}
         <div className="flex justify-between items-center">
           <h4>
-            <ImBook className="inline-block" /> 43 Lesson
+            <ImBook className="inline-block" /> {lessons} Lesson
           </h4>
           <h4>
-            <ImStarFull className="inline-block" /> 4.5 (44)
+            <ImStarFull className="inline-block" /> {rating} ({enrolled})
           </h4>
         </div>
         {/* Title */}
         <h3 className="my-4 text-xl font-medium text-green-700">
-          Become a product Manager Learn the skills and job.
+          {courseName}
         </h3>
         {/* Course Teacher */}
         <div className="flex items-center my-5">
           <img
-            src="/images/student-1.jpg"
+            src={teacherImage}
             alt="Student 1"
             className="mr-4 rounded-full"
           />
-          <p>Jim Sechen</p>
+          <p>{courseTeacher}</p>
         </div>
         {/* Card Footer */}
         <div className="flex justify-between items-center my-3">
-          <h5 className="text-lg font-medium text-green-800">Free</h5>
+          <h5 className="text-lg font-medium text-green-800">$ {cost}</h5>
           <button>
-            Details <ImArrowRight2 className="inline-block" />{' '}
+            Details <ImArrowRight2 className="inline-block" />
           </button>
         </div>
       </div>
